@@ -1,0 +1,203 @@
+.main {
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero */
+.hero {
+  padding: 120px 0 96px;
+  background: #fff;
+}
+
+.headline {
+  font-size: clamp(28px, 4.5vw, 42px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.subheadline {
+  font-size: clamp(16px, 2vw, 18px);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 540px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.cta:hover {
+  opacity: 0.85;
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.sectionAlt {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 40px;
+}
+
+/* Grid - Qué hacemos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.card {
+  padding: 0;
+}
+
+.cardTitle {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.cardText {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Método */
+.methodList {
+  list-style: none;
+  counter-reset: method;
+  padding: 0;
+}
+
+.methodList li {
+  counter-increment: method;
+  font-size: 16px;
+  color: var(--text);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.methodList li::before {
+  content: counter(method);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  min-width: 20px;
+}
+
+.methodList li:last-child {
+  border-bottom: none;
+}
+
+/* Principios */
+.principles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.principles p {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  padding: 64px 0 40px;
+  background: #fff;
+  border-top: 1px solid var(--border);
+}
+
+.footerBrand {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.footerSub {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-bottom: 12px;
+}
+
+.footerEmail {
+  font-size: 14px;
+  color: var(--text-secondary);
+  display: inline-block;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+  transition: opacity 0.2s;
+}
+
+.footerEmail:hover {
+  opacity: 0.7;
+}
+
+.footerSign {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 16px;
+}
+
+.installBtn {
+  margin-top: 16px;
+  padding: 10px 24px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.installBtn:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
